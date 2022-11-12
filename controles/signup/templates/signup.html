@@ -1,21 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/signup_style.css">
+    <title>Login page</title>
 </head>
+
 <body>
-    <div>
+    <div class="main-container">
         <div>
+            <img src="/Cohete para crear cuenta.png" alt="" class="rocket">
+            <h6 class="company-title">Sky Rocket Company</h6>
+            <br>
+            <h1>Crear cuenta</h1>
+
+
+            <div class="main-container-form">
+
+                <form action="" method="post">
+                    <h6>Nombre</h6>
+                    <input type="text" class="form-input">
+                    <h6>Cedula</h6>
+                    <input type="text" class="form-input">
+                    <h6>Correo</h6>
+                    <input type="text" class="form-input">
+                    <h6>Genero</h6>
+                    <input type="text" class="form-input" id="genero">
+
+                    <button type="submit" class="crear-cuenta" id="estirar"><a href="/home.html">Crear
+                            cuenta</a></button>
+                </form>
+
+
+            </div>
+
+            <div class="login-section">
+
+                <h6 class="inicia-sesion">Tienes cuenta con nosotros?
+                    <br>
+                    <a href="/login.html" class="inicio-sesion"> <br>Inicia sesion</a>
+                </h6>
+                </ul>
+            </div>
 
         </div>
-        <div>
-            <form action="" method="post">
-                {{form.as_p}} //Usando el .as_p ordena un poco el form
-            </form>
-        </div>
+        <div></div>
+
+        <div></div>
     </div>
 </body>
+
 </html>

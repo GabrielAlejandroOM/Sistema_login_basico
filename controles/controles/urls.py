@@ -19,5 +19,6 @@ from signup import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hola/', views.hola)
+    path('home/', views.home, name='inicio'),
+    path('signup/', views.signup, name='crear cuenta')
 ]
