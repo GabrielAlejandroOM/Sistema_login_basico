@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+MESSAGE_STORAGE = "django.contrib.messages.storage.cookie.CookieStorage"
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -120,6 +122,9 @@ USE_TZ = True
 
  #Aqui es donde vamos a configurar las rutas para nuestro html y css
 STATIC_URL = 'static/'
+
+
+LOGIN_URL = 'signup/'
 
 #Con la nueva ruta cargamos los documentos respectivos
 

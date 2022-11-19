@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,52 +7,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/signup_style.css">
-    <title>Login page</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Document</title>
 </head>
 
 <body>
-    <div class="main-container">
-        <div>
-            <img src="/Cohete para crear cuenta.png" alt="" class="rocket">
-            <h6 class="company-title">Sky Rocket Company</h6>
-            <br>
-            <h1>Crear cuenta</h1>
+    <main class="container py-3 mx-auto" style="justify-content: center; 
+     align-items: center; flex-direction: column;">
+        <div class="row" style="border-style: outset; width:80rem; display: flex; height: 50rem; background: linear-gradient(rgb(33, 202, 244), rgb(6, 75, 203)); -webkit-background-clip: text; color: transparent; border-color: rgb(183, 224, 234);">
+            <div class="col-md-4 offset-md-4">
+                <h1 class="display-5 text-center py-3" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Creación de cuenta <img src="{% static 'img/cohete.jpg' %}" alt="" style="width: 9rem;"></h1>
+
+                {{error}}
+                <form action="/signup/" method="POST" class="text">
+                    {% csrf_token %}
+
+                    <div class="mb-2 py-4">
+                        <label for="username" class="h3 py-1">Nombre</label>
+                        <input type="text" name="username" class="input-group-text offset-md-0 form-control" style="width:25rem" placeholder="Ingresa tu nombre">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="username" class="h3 py-1">Email</label>
+                        <input type="email" name="email" class="input-group-text offset-md-0 form-control" style="width:25rem" placeholder="Ingresa tu Email">
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label for="password1" class="h3 py-1">Contraseña</label>
+                        <input type="password" name="password1" class="input-group-text offset-md-0 form-control" style="width:25rem" placeholder="Ingresa tu contraseña">
+
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password2" class="h3 py-2">Confirmar Contraseña</label>
+                        <input type="password" name="password2" class="input-group-text  offset-md-0 form-control" style="width:25rem" placeholder="Confirma tu contraseña">
+                    </div>
 
 
-            <div class="main-container-form">
 
-                <form action="" method="post">
-                    <h6>Nombre</h6>
-                    <input type="text" class="form-input">
-                    <h6>Cedula</h6>
-                    <input type="text" class="form-input">
-                    <h6>Correo</h6>
-                    <input type="text" class="form-input">
-                    <h6>Genero</h6>
-                    <input type="text" class="form-input" id="genero">
-
-                    <button type="submit" class="crear-cuenta" id="estirar"><a href="/home.html">Crear
-                            cuenta</a></button>
+                    <button class="btn btn-primary" id="boton" style="display: flex; 
+                align-items: center; justify-content: center; margin-left: 8rem; font-size: 1.4rem; margin-top: 2rem; border-radius: 2rem;">
+                        Crear cuenta
+                    </button>
                 </form>
-
-
             </div>
-
-            <div class="login-section">
-
-                <h6 class="inicia-sesion">Tienes cuenta con nosotros?
-                    <br>
-                    <a href="/login.html" class="inicio-sesion"> <br>Inicia sesion</a>
-                </h6>
-                </ul>
-            </div>
-
         </div>
-        <div></div>
 
-        <div></div>
-    </div>
+
+    </main>
+
+    
+    
 </body>
 
 </html>

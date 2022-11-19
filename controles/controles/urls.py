@@ -18,7 +18,8 @@ from django.urls import path
 from signup import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('home/', views.home, name='inicio'),
-    path('signup/', views.signup, name='crear cuenta')
+    path('admin/', admin.site.urls), #Panel de administracion de nuestro proyecto
+    path('home/', views.home, name='home'),
+    path('signup/', views.signup, name='signup'),
+    path('login/', views.login, name='login')
 ]
